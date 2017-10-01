@@ -15,6 +15,12 @@
 		DF697EE91F80998E007ED5B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF697EE81F80998E007ED5B1 /* main.m */; };
 		DF697EF31F80998F007ED5B1 /* CJCalendarDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF697EF21F80998F007ED5B1 /* CJCalendarDemoTests.m */; };
 		DF697EFE1F80998F007ED5B1 /* CJCalendarDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF697EFD1F80998F007ED5B1 /* CJCalendarDemoUITests.m */; };
+		DF697F0E1F8099C8007ED5B1 /* CJCalendarPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DF697F0D1F8099C8007ED5B1 /* CJCalendarPicker.m */; };
+		DF697F131F809AAB007ED5B1 /* CJCalendarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DF697F121F809AAB007ED5B1 /* CJCalendarItem.m */; };
+		DF697F181F809E85007ED5B1 /* bt_next@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF697F141F809E84007ED5B1 /* bt_next@3x.png */; };
+		DF697F191F809E85007ED5B1 /* bt_previous@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF697F151F809E84007ED5B1 /* bt_previous@3x.png */; };
+		DF697F1A1F809E85007ED5B1 /* bt_previous@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF697F161F809E85007ED5B1 /* bt_previous@2x.png */; };
+		DF697F1B1F809E85007ED5B1 /* bt_next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DF697F171F809E85007ED5B1 /* bt_next@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,15 @@
 		DF697EF91F80998F007ED5B1 /* CJCalendarDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJCalendarDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF697EFD1F80998F007ED5B1 /* CJCalendarDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJCalendarDemoUITests.m; sourceTree = "<group>"; };
 		DF697EFF1F80998F007ED5B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF697F0C1F8099C8007ED5B1 /* CJCalendarPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJCalendarPicker.h; sourceTree = "<group>"; };
+		DF697F0D1F8099C8007ED5B1 /* CJCalendarPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJCalendarPicker.m; sourceTree = "<group>"; };
+		DF697F101F809A59007ED5B1 /* Common_define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common_define.h; sourceTree = "<group>"; };
+		DF697F111F809AAB007ED5B1 /* CJCalendarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJCalendarItem.h; sourceTree = "<group>"; };
+		DF697F121F809AAB007ED5B1 /* CJCalendarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJCalendarItem.m; sourceTree = "<group>"; };
+		DF697F141F809E84007ED5B1 /* bt_next@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_next@3x.png"; sourceTree = "<group>"; };
+		DF697F151F809E84007ED5B1 /* bt_previous@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_previous@3x.png"; sourceTree = "<group>"; };
+		DF697F161F809E85007ED5B1 /* bt_previous@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_previous@2x.png"; sourceTree = "<group>"; };
+		DF697F171F809E85007ED5B1 /* bt_next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_next@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +116,7 @@
 		DF697ED81F80998E007ED5B1 /* CJCalendarDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DF697F0B1F8099AB007ED5B1 /* CJCalendarHero */,
 				DF697ED91F80998E007ED5B1 /* AppDelegate.h */,
 				DF697EDA1F80998E007ED5B1 /* AppDelegate.m */,
 				DF697EDC1F80998E007ED5B1 /* ViewController.h */,
@@ -131,6 +147,22 @@
 			);
 			path = CJCalendarDemoUITests;
 			sourceTree = "<group>";
+		};
+		DF697F0B1F8099AB007ED5B1 /* CJCalendarHero */ = {
+			isa = PBXGroup;
+			children = (
+				DF697F171F809E85007ED5B1 /* bt_next@2x.png */,
+				DF697F141F809E84007ED5B1 /* bt_next@3x.png */,
+				DF697F161F809E85007ED5B1 /* bt_previous@2x.png */,
+				DF697F151F809E84007ED5B1 /* bt_previous@3x.png */,
+				DF697F0C1F8099C8007ED5B1 /* CJCalendarPicker.h */,
+				DF697F0D1F8099C8007ED5B1 /* CJCalendarPicker.m */,
+				DF697F101F809A59007ED5B1 /* Common_define.h */,
+				DF697F111F809AAB007ED5B1 /* CJCalendarItem.h */,
+				DF697F121F809AAB007ED5B1 /* CJCalendarItem.m */,
+			);
+			path = CJCalendarHero;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -238,9 +270,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF697F191F809E85007ED5B1 /* bt_previous@3x.png in Resources */,
+				DF697F181F809E85007ED5B1 /* bt_next@3x.png in Resources */,
 				DF697EE61F80998E007ED5B1 /* LaunchScreen.storyboard in Resources */,
 				DF697EE31F80998E007ED5B1 /* Assets.xcassets in Resources */,
 				DF697EE11F80998E007ED5B1 /* Main.storyboard in Resources */,
+				DF697F1A1F809E85007ED5B1 /* bt_previous@2x.png in Resources */,
+				DF697F1B1F809E85007ED5B1 /* bt_next@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +303,9 @@
 			files = (
 				DF697EDE1F80998E007ED5B1 /* ViewController.m in Sources */,
 				DF697EE91F80998E007ED5B1 /* main.m in Sources */,
+				DF697F0E1F8099C8007ED5B1 /* CJCalendarPicker.m in Sources */,
 				DF697EDB1F80998E007ED5B1 /* AppDelegate.m in Sources */,
+				DF697F131F809AAB007ED5B1 /* CJCalendarItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,12 +467,15 @@
 		DF697F031F80998F007ED5B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZUUQP4NY7G;
 				INFOPLIST_FILE = CJCalendarDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zzh.CJCalendarDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -442,12 +483,15 @@
 		DF697F041F80998F007ED5B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZUUQP4NY7G;
 				INFOPLIST_FILE = CJCalendarDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zzh.CJCalendarDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
