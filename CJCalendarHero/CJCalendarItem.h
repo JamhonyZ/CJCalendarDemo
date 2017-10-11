@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Common_define.h"
 
-#define kCJCalendarItemW  CJScreenWidth/7
+#define kCJCalendarItemW  (CJScreenWidth/7)
 #define kCJCalendarItemH  30
 @interface CJCalendarItem : UICollectionViewCell
 

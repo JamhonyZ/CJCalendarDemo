@@ -21,8 +21,8 @@
 - (UILabel *)dateLabel
 {
     if (!_dateLabel) {
-        CGFloat labelWH = kCJCalendarItemW < 20 ? kCJCalendarItemW : 20;
-        _dateLabel = [[UILabel alloc] initWithFrame:CGRectMake((labelWH-20)/2, (labelWH-20)/2 , 20, 20)];
+        CGFloat labelWH = kCJCalendarItemW > 20 ? kCJCalendarItemW : 20;
+        _dateLabel = [[UILabel alloc] initWithFrame:CGRectMake((labelWH-20)/2, (kCJCalendarItemH-20)/2 , 20, 20)];
         [_dateLabel setTextAlignment:NSTextAlignmentCenter];
         _dateLabel.font = [UIFont systemFontOfSize:15];
         _dateLabel.layer.cornerRadius = 3;

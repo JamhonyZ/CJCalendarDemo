@@ -31,28 +31,20 @@
     [show addTarget:self action:@selector(showCalaendarAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:show];
     
-    UIButton *hidden = [UIButton buttonWithType:UIButtonTypeCustom];
-    hidden.frame = CGRectMake((CJScreenWidth-100)/2, 180, 100, 40);
-    [hidden setTitle:@"收起日历" forState:UIControlStateNormal];
-    hidden.titleLabel.textAlignment = NSTextAlignmentCenter;
-    [hidden setTitleColor:kColorChoose forState:UIControlStateNormal];
-    hidden.titleLabel.font = [UIFont systemFontOfSize:15];
-    [hidden addTarget:self action:@selector(hiddenCalaendarAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:hidden];
+ 
     
-    _showLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMinX(hidden.frame), CGRectGetMaxY(hidden.frame)+20, 100, 40)];
+    _showLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMinX(show.frame), CGRectGetMaxY(show.frame)+20, 100, 40)];
     _showLabel.font = [UIFont systemFontOfSize:15];
     _showLabel.textColor = kColorChoose;
     _showLabel.layer.borderColor = kColorPassDay.CGColor;
     _showLabel.layer.borderWidth = 1;
     _showLabel.textAlignment = NSTextAlignmentCenter;
-    [self.view addSubview:hidden];
+    [self.view addSubview:_showLabel];
     
     
 }
 
 - (void)showCalaendarAction {
-    [self.view addSubview:self.picker];
     [self.picker show];
 }
 - (void)hiddenCalaendarAction {
@@ -61,7 +53,7 @@
 - (CJCalendarPicker *)picker {
     if (!_picker) {
          __weak typeof(self) weakSelf = self;
-        _picker = [[CJCalendarPicker alloc] initWithFrame:CGRectMake(0, CJScreenHeight-(kCJCalendarItemH*6+kOperationH), CJScreenWidth, kCJCalendarItemH*6+kOperationH) clickBlock:^(NSInteger year, NSInteger month, NSInteger day) {
+        _picker = [[CJCalendarPicker alloc] initWithFrame:CGRectMake(0, CJScreenHeight-kCJCalendarPickerHeight, CJScreenWidth, kCJCalendarPickerHeight) clickBlock:^(NSInteger year, NSInteger month, NSInteger day) {
            __strong typeof (weakSelf) strongSelf = weakSelf;
             strongSelf.showLabel.text = [NSString stringWithFormat:@"%@-%@-%@",@(year),@(month),@(day)];
         }];

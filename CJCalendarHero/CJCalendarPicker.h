@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "CJCalendarItem.h"
 
-static const  CGFloat kOperationH = 44.f;
+#define kOperationH 44.f
+
+#define kCJCalendarPickerHeight (kCJCalendarItemH*6+kOperationH)
 
 typedef void(^RefreshDateBlock)(NSInteger year,NSInteger month,NSInteger day);
 

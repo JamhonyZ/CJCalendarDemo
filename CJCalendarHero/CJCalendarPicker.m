@@ -24,6 +24,8 @@ static   NSString *kCellIden = @"calendarItemiden";
 @property (nonatomic, strong) UIButton *nextButton;
 //选中的日期
 @property (nonatomic, copy) NSString *selectStr;
+//阴影
+@property (nonatomic, strong)UIView *backMaskView;
 
 @end
 
@@ -260,10 +262,20 @@ static   NSString *kCellIden = @"calendarItemiden";
 
 
 - (void)show {
+    
     self.hidden = NO;
     [self.ctView reloadData];
+    
     self.transform = CGAffineTransformTranslate(self.transform, 0, CGRectGetHeight(self.frame));
+    
+    [[UIApplication sharedApplication].delegate.window addSubview:self];
+    [[UIApplication sharedApplication].delegate.window addSubview:self.backMaskView];
+    
+    CGRect frame = self.backMaskView.frame;
+    frame.size.height -= CGRectGetHeight(self.frame);
+    
     [UIView animateWithDuration:0.3 animations:^(void) {
+        self.backMaskView.frame = frame;
         self.transform = CGAffineTransformIdentity;
     } completion:^(BOOL isFinished) {
         
@@ -272,10 +284,15 @@ static   NSString *kCellIden = @"calendarItemiden";
 
 - (void)dismiss {
     if (self.superview) {
+        
+        CGRect frame = self.backMaskView.frame;
+        frame.size.height += CGRectGetHeight(self.frame);
         [UIView animateWithDuration:0.2 animations:^(void) {
+            self.backMaskView.frame = frame;
             self.transform = CGAffineTransformTranslate(self.transform, 0, CGRectGetHeight(self.frame));
         } completion:^(BOOL isFinished) {
             [self removeFromSuperview];
+            [self.backMaskView removeFromSuperview];
         }];
     }
 }
@@ -290,7 +307,9 @@ static   NSString *kCellIden = @"calendarItemiden";
     swipRight.direction = UISwipeGestureRecognizerDirectionRight;
     [self addGestureRecognizer:swipRight];
 }
-
+- (void)handlerTapAction:(UIGestureRecognizer *)gestureRecoginzer {
+    [self dismiss];
+}
 #pragma mark -- LazyLoad
 - (UIButton *)previousButton {
     if (!_previousButton) {
@@ -344,5 +363,12 @@ static   NSString *kCellIden = @"calendarItemiden";
     return _ctView;
 }
 
-
+- (UIView *)backMaskView {
+    if (!_backMaskView) {
+        _backMaskView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CJScreenWidth, CJScreenHeight)];
+        _backMaskView.backgroundColor =  [UIColor colorWithRed:149/255.0f green:149/255.0f blue:149/255.0f alpha:0.5];
+        [_backMaskView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handlerTapAction:)]];
+    }
+    return _backMaskView;
+}
 @end
