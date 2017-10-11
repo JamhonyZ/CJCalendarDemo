@@ -19,11 +19,17 @@ typedef void(^RefreshDateBlock)(NSInteger year,NSInteger month,NSInteger day);
 
 - (instancetype)initWithFrame:(CGRect)frame clickBlock:(RefreshDateBlock)refreshBlock;
 
+@property (nonatomic, copy) RefreshDateBlock refreshBlock;
+
+#pragma mark -- 必填配置
+
 //切换月份，会变动
 @property (nonatomic, strong) NSDate *newestDate;
 //当日
 @property (nonatomic, strong) NSDate *currentDate;
 
+
+#pragma mark -- 可选配置
 //是否支持查阅未来月份
 @property (nonatomic, assign) BOOL ifSupportFutureMonth;
 
@@ -33,7 +39,8 @@ typedef void(^RefreshDateBlock)(NSInteger year,NSInteger month,NSInteger day);
 //可查阅的最大年月  (默认无限查阅) 赋值 2020-09
 @property (nonatomic, copy) NSString *maxYearMonth;
 
-@property (nonatomic, copy) RefreshDateBlock refreshBlock;
+
+#pragma mark -- 公开方法
 
 - (void)show;
 
