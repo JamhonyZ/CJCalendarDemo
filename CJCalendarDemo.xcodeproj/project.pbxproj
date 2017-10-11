@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD421F061F8DFA3F00A443B2 /* CJCalendarShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CJCalendarShot.png; sourceTree = "<group>"; };
 		DF697ED61F80998E007ED5B1 /* CJCalendarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJCalendarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF697ED91F80998E007ED5B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DF697EDA1F80998E007ED5B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -121,6 +122,7 @@
 				DF697EDA1F80998E007ED5B1 /* AppDelegate.m */,
 				DF697EDC1F80998E007ED5B1 /* ViewController.h */,
 				DF697EDD1F80998E007ED5B1 /* ViewController.m */,
+				CD421F061F8DFA3F00A443B2 /* CJCalendarShot.png */,
 				DF697EDF1F80998E007ED5B1 /* Main.storyboard */,
 				DF697EE21F80998E007ED5B1 /* Assets.xcassets */,
 				DF697EE41F80998E007ED5B1 /* LaunchScreen.storyboard */,
