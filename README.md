@@ -3,8 +3,6 @@
 
 使用说明：下载，导出CJCalendarHero，创建CJCalendarPicker，调用show方法即可。详情可见代码。。。。
 
-
-
 __weak typeof(self) weakSelf = self;
 
 
@@ -43,5 +41,6 @@ _picker.currentDate = _picker.newestDate;
 
 
 --------效果图-------
+
 ![image](https://github.com/JamhonyZ/CJCalendarDemo/blob/master/CJCalendarDemo/CJCalendarShot.png)
 
